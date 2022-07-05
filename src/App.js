@@ -19,7 +19,7 @@ class App extends Component {
   onSubmitHandler = ({ name, number }) => {
     const sameContactName = this.state.contacts
       .map(contact => contact.name)
-      .includes(name);
+      .includes(name.toLowerCase());
 
     if (sameContactName) {
       alert(`${name} is already in contacts.`);
@@ -63,7 +63,7 @@ class App extends Component {
         </div>
         <h2 className="Title">Contacts</h2>
         <div className="Contacts">
-          {completedFilter.length > 1 && (
+          {this.state.contacts.length > 1 && (
             <Filter value={this.state.filter} onChange={this.changeFilter} />
           )}
           <ContactList

@@ -30,7 +30,7 @@ class Input extends Component {
 }
 
 Input.propTypes = {
-  ononChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
   labelName: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
